@@ -1,0 +1,35 @@
+$dokka.format:gfm-v1
+$dokka.linkExtension:md
+$dokka.location:com.ensody.reactivestate.test////PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/index.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTest///PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test/index.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTest/CoroutineTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test/-coroutine-test.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTest/attachedDisposables/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test/attached-disposables.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTest/collectFlow/kotlinx.coroutines.test.TestCoroutineScope#kotlinx.coroutines.flow.Flow[TypeParam(bounds=[kotlin.Any?])]#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test/collect-flow.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTest/runBlockingTest/#kotlin.coroutines.SuspendFunction1[kotlinx.coroutines.test.TestCoroutineScope,kotlin.Unit]/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test/run-blocking-test.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule///PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/index.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/CoroutineTestRule/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/-coroutine-test-rule.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/enterCoroutineTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/enter-coroutine-test.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/exitCoroutineTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/exit-coroutine-test.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/runBlockingTest/#kotlin.coroutines.SuspendFunction1[kotlinx.coroutines.test.TestCoroutineScope,kotlin.Unit]/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/run-blocking-test.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/testCoroutineDispatcher/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/test-coroutine-dispatcher.md
+$dokka.location:com.ensody.reactivestate.test/CoroutineTestRule/testCoroutineScope/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-coroutine-test-rule/test-coroutine-scope.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest///PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/index.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/EventNotifierTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/-event-notifier-test.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/eventNotifier/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/event-notifier.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/events/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/events.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/handleEvents/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/handle-events.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/handleEventsInRunBlockingTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/handle-events-in-run-blocking-test.md
+$dokka.location:com.ensody.reactivestate.test/EventNotifierTest/runBlockingTest/#kotlin.coroutines.SuspendFunction1[kotlinx.coroutines.test.TestCoroutineScope,kotlin.Unit]/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-event-notifier-test/run-blocking-test.md
+$dokka.location:com.ensody.reactivestate.test/ReactiveStateTest///PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-reactive-state-test/index.md
+$dokka.location:com.ensody.reactivestate.test/ReactiveStateTest/ReactiveStateTest/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-reactive-state-test/-reactive-state-test.md
+$dokka.location:com.ensody.reactivestate.test/ReactiveStateTest/eventNotifier/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-reactive-state-test/event-notifier.md
+$dokka.location:com.ensody.reactivestate.test/ReactiveStateTest/reactiveState/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-reactive-state-test/reactive-state.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig///PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/index.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/TestCoroutineDispatcherConfig/#kotlinx.coroutines.test.TestCoroutineDispatcher/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/-test-coroutine-dispatcher-config.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/default/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/default.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/dispatcher/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/dispatcher.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/io/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/io.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/main/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/main.md
+$dokka.location:com.ensody.reactivestate.test/TestCoroutineDispatcherConfig/unconfined/#/PointingToDeclaration/reactivestate-test/com.ensody.reactivestate.test/-test-coroutine-dispatcher-config/unconfined.md
+com.ensody.reactivestate.test
+

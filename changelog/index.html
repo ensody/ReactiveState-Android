@@ -1,0 +1,1433 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An easy to understand reactive state management solution for Kotlin and Android">
+      
+      
+      
+        <meta name="author" content="Ensody GmbH">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>Changelog - ReactiveState</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ReactiveState" class="md-header__button md-logo" aria-label="ReactiveState" data-md-component="logo">
+      
+  <img src="../images/ensody.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ReactiveState
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ensody/ReactiveState-Kotlin/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReactiveState-Kotlin
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ReactiveState" class="md-nav__button md-logo" aria-label="ReactiveState" data-md-component="logo">
+      
+  <img src="../images/ensody.svg" alt="logo">
+
+    </a>
+    ReactiveState
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ensody/ReactiveState-Kotlin/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReactiveState-Kotlin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reactive-programming/" class="md-nav__link">
+        Reactive programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiplatform-viewmodels/" class="md-nav__link">
+        Multiplatform ViewModels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demand-driven-programming/" class="md-nav__link">
+        Demand-driven programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event-handling/" class="md-nav__link">
+        Event handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-restoration/" class="md-nav__link">
+        State restoration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifecycle-handling/" class="md-nav__link">
+        Lifecycle handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-handling/" class="md-nav__link">
+        Error handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-testing-coroutines/" class="md-nav__link">
+        Unit testing coroutines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutablevalueflow/" class="md-nav__link">
+        MutableValueFlow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-guess-the-number/" class="md-nav__link">
+        Example: Guess the number
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        API reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/reactivestate/com.ensody.reactivestate/" class="md-nav__link">
+        reactivestate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/reactivestate-test/com.ensody.reactivestate.test/" class="md-nav__link">
+        reactivestate-test
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Changelog
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    4.2.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    4.2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410" class="md-nav__link">
+    4.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#400" class="md-nav__link">
+    4.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#390" class="md-nav__link">
+    3.9.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#383" class="md-nav__link">
+    3.8.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#382" class="md-nav__link">
+    3.8.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#381" class="md-nav__link">
+    3.8.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#380" class="md-nav__link">
+    3.8.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#370" class="md-nav__link">
+    3.7.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#360" class="md-nav__link">
+    3.6.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#350" class="md-nav__link">
+    3.5.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#340" class="md-nav__link">
+    3.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330" class="md-nav__link">
+    3.3.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    3.2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300" class="md-nav__link">
+    3.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0154" class="md-nav__link">
+    0.15.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0153" class="md-nav__link">
+    0.15.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0152" class="md-nav__link">
+    0.15.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0150" class="md-nav__link">
+    0.15.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0140" class="md-nav__link">
+    0.14.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0130" class="md-nav__link">
+    0.13.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0120" class="md-nav__link">
+    0.12.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0114" class="md-nav__link">
+    0.11.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0113" class="md-nav__link">
+    0.11.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0112" class="md-nav__link">
+    0.11.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#011" class="md-nav__link">
+    0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091" class="md-nav__link">
+    0.9.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08" class="md-nav__link">
+    0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    0.5
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    4.2.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    4.2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410" class="md-nav__link">
+    4.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#400" class="md-nav__link">
+    4.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#390" class="md-nav__link">
+    3.9.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#383" class="md-nav__link">
+    3.8.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#382" class="md-nav__link">
+    3.8.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#381" class="md-nav__link">
+    3.8.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#380" class="md-nav__link">
+    3.8.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#370" class="md-nav__link">
+    3.7.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#360" class="md-nav__link">
+    3.6.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#350" class="md-nav__link">
+    3.5.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#340" class="md-nav__link">
+    3.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330" class="md-nav__link">
+    3.3.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    3.2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300" class="md-nav__link">
+    3.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0154" class="md-nav__link">
+    0.15.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0153" class="md-nav__link">
+    0.15.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0152" class="md-nav__link">
+    0.15.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0150" class="md-nav__link">
+    0.15.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0140" class="md-nav__link">
+    0.14.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0130" class="md-nav__link">
+    0.13.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0120" class="md-nav__link">
+    0.12.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0114" class="md-nav__link">
+    0.11.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0113" class="md-nav__link">
+    0.11.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0112" class="md-nav__link">
+    0.11.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#011" class="md-nav__link">
+    0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091" class="md-nav__link">
+    0.9.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08" class="md-nav__link">
+    0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    0.5
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ensody/ReactiveState-Kotlin/edit/master/docs/changelog.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="421">4.2.1<a class="headerlink" href="#421" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed recursively changing the value of a <code>MutableValueFlow</code> from within the <code>collect</code> block (change-&gt;emit-&gt;change). Previously this could lead to a deadlock because the first change is still locking the <code>MutableValueFLow</code>.</li>
+</ul>
+<h2 id="420">4.2.0<a class="headerlink" href="#420" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>OnReactiveStateAttached</code> interface to allow customizing <code>by reactiveState</code> behavior.</li>
+</ul>
+<h2 id="410">4.1.0<a class="headerlink" href="#410" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>MutableValueFlow&lt;Int&gt;.incrementFrom(flow: StateFlow&lt;Int&gt;)</code> extension function to e.g. sum multiple loading states into one <code>MutableValueFlow&lt;Int&gt;</code>.</li>
+</ul>
+<h2 id="400">4.0.0<a class="headerlink" href="#400" title="Permanent link">&para;</a></h2>
+<p>This release adds support for Kotlin Multiplatform and introduces a multiplatform <code>ReactiveState</code> ViewModel.</p>
+<p>Breaking changes:</p>
+<ul>
+<li>The modules have been restructured and renamed:</li>
+<li><code>reactivestate-bom</code> (previously dependency-versions-bom)</li>
+<li><code>reactivestate</code> (previously core and reactivestate)</li>
+<li><code>reactivestate-test</code> (previously core-test)</li>
+<li><code>CoroutineTestRule</code> is now a simple class that you can either derive from or add as an attribute.</li>
+<li><code>CoroutineTest</code> has become independent of JUnit and inherits from <code>CoroutineTestRule</code>. The <code>coroutineTestRule</code> attribute has been replaced with direct <code>testCoroutineScope</code> and <code>testCoroutineDispatcher</code> attributes inherited from the new <code>CoroutineTestRule</code>.</li>
+<li>The <code>withLoading</code> concept in <code>autoRun</code>, <code>CoroutineLauncher</code> etc. has become more flexible to allow tracking separate loading states.</li>
+<li>Removed <code>ReducingStateFlow</code> as part of the simplified loading state concept.</li>
+</ul>
+<p>Non-breaking changes:</p>
+<ul>
+<li>Added a multiplatform ViewModel <code>ReactiveState</code> (interface), <code>BaseReactiveState</code> (base class). This is actually a broader concept that can be used for any living object that can launch coroutines, automatically handles errors, triggers events, and tracks loading states.</li>
+<li>Added a multiplatform <code>buildViewModel</code> extension function for creating such a <code>ViewModel</code> on an Activity and Fragment.</li>
+<li>Improved automatic error catching for <code>autoRun</code> and <code>derived</code>.</li>
+<li>Fixes for lifecycle observers: <code>onCreate</code>, <code>onCreateView</code>, <code>onCreateViewOnce</code>, <code>onDestroyView</code>, <code>onDestroyViewOnce</code>.</li>
+<li><code>MutableValueFlow.replaceLocked</code> returns the previous value now.</li>
+</ul>
+<p>Known limitations which will be solved with later releases:</p>
+<ul>
+<li>On non-JVM platforms, <code>dispatchers.io</code> currently equals <code>Dispatchers.Default</code>.</li>
+<li>This primarily affects <code>MutableValueFlow</code>: Internally, all uses of the JVM-only <code>synchronized</code> have been replaced with a spinlock <code>Mutex</code> since they were only utilized for very tiny blocks of code which normally don&rsquo;t even have any parallel access. Be careful about doing too large computations in combination with highly concurrent updates via <code>replaceLocked</code>, though.</li>
+</ul>
+<p>Changelog of preview releases:</p>
+<ul>
+<li>4.0.0-dev.4:</li>
+<li>Fixed build failures due to Jacoco integration.</li>
+<li>4.0.0-dev.3:</li>
+<li>Removed <code>ReducingStateFlow</code>.</li>
+<li>Publish iOS/macOS builds.</li>
+<li>4.0.0-dev.2:</li>
+<li>Improved automatic error catching for <code>autoRun</code> and <code>derived</code>.</li>
+<li>Fixes for lifecycle observers</li>
+<li>Removed <code>LoadingStateTracker</code>.</li>
+<li>Replaced <code>CoroutineLauncher.isAnyLoading</code> and <code>generalLoading</code> with a simple <code>loading: MutableValueFlow&lt;Int&gt;</code>.</li>
+<li><code>MutableValueFlow.replaceLocked</code> returns the previous value now.</li>
+<li><code>MutableValueFlow.increment</code>/<code>decrement</code> now have an optional <code>amount</code> argument to increment by more than 1. Also, they return the previous value.</li>
+<li>4.0.0-dev.1: This preview release comes without macOS/iOS builds. A port of the CI pipeline is in progress.</li>
+</ul>
+<h2 id="390">3.9.0<a class="headerlink" href="#390" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>@ExperimentalReactiveStateApi</code> annotation to mark experimental APIs.</li>
+<li>Explicitly marked <code>SuspendMutableValueFlow</code> as experimental and changed its constructor to take the default value instead of a delegating <code>MutableValueFlow</code>.</li>
+<li>Turned <code>SuspendMutableValueFlow</code> into an interface and constructor/factory function.</li>
+</ul>
+<h2 id="383">3.8.3<a class="headerlink" href="#383" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed argument inconsistency in <code>SuspendMutableValueFlow.replace</code>.</li>
+</ul>
+<h2 id="382">3.8.2<a class="headerlink" href="#382" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed state restoration with <code>SavedStateHandleStore</code>.</li>
+</ul>
+<h2 id="381">3.8.1<a class="headerlink" href="#381" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed support for nullable values in <code>SavedStateHandleStore</code>.</li>
+</ul>
+<h2 id="380">3.8.0<a class="headerlink" href="#380" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>by propertyName</code> and <code>by lazyProperty</code> helpers simplifying <code>ReadOnlyProperty</code>.</li>
+</ul>
+<h2 id="370">3.7.0<a class="headerlink" href="#370" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>MutableValueFlow</code>&lsquo;s constructor now optionally takes a <code>setter</code> lambda function which is executed before emitting a new value. This allows observing / reacting to changes without needing a <code>CoroutineScope</code>.</li>
+<li>Added <code>val Fragment/Activity.savedInstanceState</code> helper which gives you access to a <code>StateFlowStore</code> where you can put saved instance state.</li>
+<li>Added <code>by stateFlowViewModel</code> helpers which work like <code>by stateViewModel</code> but use a <code>StateFlowStore</code>.</li>
+<li>Added <code>by Fragment/Activity.savedInstanceState(default)</code> and <code>by StateFlowStore.getData(default)</code> and extension function which automatically uses a key based on the property name.</li>
+<li><code>SavedStateHandleStore</code> now provides an alternative constructor with doesn&rsquo;t require a <code>CoroutineScope</code> and only has one-way <code>MutableValueFlow -&gt; LiveData</code> sync (which covers the 99% use-case).</li>
+</ul>
+<h2 id="360">3.6.0<a class="headerlink" href="#360" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>SuspendMutableValueFlow</code> for values that must be mutated via a suspend fun.</li>
+</ul>
+<h2 id="350">3.5.0<a class="headerlink" href="#350" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The lambda function for <code>WhileUsed</code> now receives a <code>WhileUsedReferenceToken</code> which has a lazy <code>scope</code> attribute in case you need a <code>CoroutineScope</code> with the same lifetime as your <code>WhileUsed</code> value.</li>
+<li>Fixed <code>withLoading</code> behavior of first <code>derived</code> calculation.</li>
+</ul>
+<h2 id="340">3.4.0<a class="headerlink" href="#340" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>buildOnViewModel</code> which allows creating arbitrary objects living on an internally-created wrapper ViewModel.</li>
+<li>Added <code>MutableStateFlow.replace</code> and <code>MutableValueFlow.replaceLocked</code> helper functions for simplifying e.g. data class <code>copy()</code> based mutation.</li>
+</ul>
+<h2 id="330">3.3.0<a class="headerlink" href="#330" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>NamespacedStateFlowStore</code>.</li>
+<li>Added <code>ReducingStateFlow</code>.</li>
+</ul>
+<h2 id="321">3.2.1<a class="headerlink" href="#321" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Moved from JCenter to Maven Central (<a href="https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/">JCenter is shutting down</a>). Make sure your <code>repositories</code> block looks like this:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">google</span><span class="o">()</span>
+    <span class="n">mavenCentral</span><span class="o">()</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="320">3.2.0<a class="headerlink" href="#320" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>CoroutineTest</code> now implements <code>AttachedDisposables</code> and disposes at the end of <code>runBlockingTest</code>.</li>
+<li><code>CoroutineTest</code> provides <code>collectFlow</code> to easily collect a <code>derived</code> with <code>WhileSubscribed()</code> in background.</li>
+</ul>
+<h2 id="311">3.1.1<a class="headerlink" href="#311" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed <code>withErrorReporting</code> to really accept a suspension function.</li>
+</ul>
+<h2 id="310">3.1.0<a class="headerlink" href="#310" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>withErrorReporting</code> to handle suspension functions and optional <code>onError</code>.</li>
+<li>Added <code>EventNotifier.handleEvents</code> helpers for Kotlin and Android. The Android version takes a <code>LifecycleOwner</code>.</li>
+<li>Added <code>EventNotifierTest</code>.</li>
+</ul>
+<h2 id="300">3.0.0<a class="headerlink" href="#300" title="Permanent link">&para;</a></h2>
+<p>Breaking changes:</p>
+<ul>
+<li>IMPORTANT: In order to overcome a limitation, the <code>flowTransformer</code> argument of <code>derived</code>/<code>coAutoRun</code>/<code>CoAutoRunner</code> must now map over lambda functions and execute them. E.g.: <code>mapLatest { it() }</code>. Without the <code>it()</code> no value will ever be recomputed!</li>
+<li>The default <code>flowTransformer</code> has changed from <code>{ mapLatest { } }</code> to <code>{ conflatedWorker() }</code>. There is also <code>latestWorker</code> if you want the old behavior.</li>
+<li>The possible arguments to <code>derived</code> were changed a little bit in order to improve compatibility with <code>WhileUsed</code>. Either you must remove the <code>started: SharingStarted</code> argument or additionally pass an <code>initial</code> value.</li>
+<li>If you leave out the <code>started</code> argument <code>derived</code> behaves like before when passing <code>Eagerly</code>: the value is computed immediately and synchronously and you can&rsquo;t call <code>suspend</code> functions within the observer.</li>
+<li>Otherwise, you have to pass an <code>initial</code> value. In this case, <code>derived</code> is asynchronous and you can call <code>suspend</code> functions within the observer.</li>
+<li>The default value for <code>started</code> is now <code>Eagerly</code> because that has better safety guarantees. So, in most usages the whole argument can now be removed (except where you really need <code>WhileSubscribed()</code>, for example).</li>
+<li>Removed bindings because they turned out to not be useful enough.</li>
+<li><code>Resolver.track()</code> now returns the <code>AutoRunnerObservable</code> instead of the <code>underlyingObservable</code>.</li>
+</ul>
+<p>Non-breaking changes:</p>
+<ul>
+<li>Added <code>WhileUsed</code> for reference-counted singletons that get garbage-collected when all consumers&rsquo; <code>CoroutineScope</code>s end.</li>
+<li>Added <code>conflatedWorker</code>, <code>latestWorker</code> and <code>debouncedWorker</code> as simple <code>flowTransformer</code>s for the suspend-based <code>derived</code>/<code>coAutoRun</code>.</li>
+<li>Added <code>conflatedMap</code> helper for mapping first and last elements and - whenever possible - intermediate elements.</li>
+<li>Added simple <code>ErrorEvents</code> interface and <code>withErrorReporting(eventNotifier) { ... }</code> for easy error handling.</li>
+<li><code>MutableFlow.tryEmit</code> now returns a <code>Boolean</code>.</li>
+</ul>
+<p>Legal change:</p>
+<ul>
+<li>Switched license to Apache 2.0.</li>
+</ul>
+<h2 id="204">2.0.4<a class="headerlink" href="#204" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Upgraded dependencies (coroutines 1.4.3, androidx.lifecycle 2.3.0, fragment-ktx 1.3.1)</li>
+</ul>
+<h2 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed BOM (reactivestate was missing).</li>
+</ul>
+<h2 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h2>
+<p>Breaking changes:</p>
+<ul>
+<li>Moved all Android-related code to the <code>com.ensody.reactivestate.android</code> package to avoid method resolution ambiguity.</li>
+<li>Removed <code>CoroutineScopeOwner</code> (replaced by <code>CoroutineLauncher</code>).</li>
+</ul>
+<p>Non-breaking changes:</p>
+<ul>
+<li>Added <code>CoroutineLauncher</code> interface to allow overriding how <code>autoRun</code>/<code>derived</code> launch their coroutines (e.g. to include custom error handling or a loading state).</li>
+<li>Added <code>coAutoRun</code> and <code>CoAutoRunner</code> and <code>derived</code> variants which take suspension functions and use <code>mapLatest</code>.</li>
+</ul>
+<h2 id="110">1.1.0<a class="headerlink" href="#110" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>StateFlowStore.getData()</code> now returns a <code>MutableValueFlow</code></li>
+</ul>
+<h2 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>derived</code> now takes a mandatory <code>started: SharingStarted</code> argument - similar to <code>stateIn</code>/<code>shareIn</code> (<code>WhileSubscribed()</code>, <code>Lazily</code>, <code>Eagerly</code>, etc.)</li>
+</ul>
+<h2 id="0154">0.15.4<a class="headerlink" href="#0154" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed <code>CoroutineTest</code>.</li>
+</ul>
+<h2 id="0153">0.15.3<a class="headerlink" href="#0153" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added support for using <code>CoroutineTest</code> by delegation (preventing multiple inheritance situations).</li>
+</ul>
+<h2 id="0152">0.15.2<a class="headerlink" href="#0152" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>buildViewModel</code> and <code>stateViewModel</code> extension functions for <code>Activity</code>.</li>
+</ul>
+<h2 id="0150">0.15.0<a class="headerlink" href="#0150" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>derived</code> supports an optional <code>lazy = true</code> argument to observe lazily.</li>
+<li>Added a global <code>dispatchers</code> API for replacing <code>Dispatchers</code> (<code>Main</code>, <code>IO</code>, etc.) in a way that allows switching to <code>TestCoroutineDispatcher</code> in unit tests.</li>
+<li>Added coroutine unit test helpers in the <code>com.ensody.reactivestate:core-test</code> module:</li>
+<li><code>CoroutineTest</code> base class for tests that use coroutines. This sets up  <code>MainScope</code>, <code>dispatchers.io</code>, etc. to use <code>TestCoroutineDispatcher</code>.</li>
+<li><code>CoroutineTestRule</code> a test rule for setting up coroutines.</li>
+<li><code>CoroutineTestRuleOwner</code> a helper interface in case you can&rsquo;t use <code>CoroutineTest</code>, but still want minimal boilerplate.</li>
+<li>Removed <code>launchWhileStarted</code> and <code>launchWhileResumed</code>.</li>
+<li>Added <code>dependency-versions-bom</code> platform project. You can now include the versions of all modules like this:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="c1">// Add the BOM using the desired ReactiveState version</span>
+    <span class="n">api</span> <span class="n">platform</span><span class="o">(</span><span class="s2">&quot;com.ensody.reactivestate:dependency-versions-bom:VERSION&quot;</span><span class="o">)</span>
+
+    <span class="c1">// Now you can leave out the version number from all other ReactiveState modules:</span>
+    <span class="n">implementation</span> <span class="s2">&quot;com.ensody.reactivestate:core&quot;</span> <span class="c1">// For Kotlin-only projects</span>
+    <span class="n">implementation</span> <span class="s2">&quot;com.ensody.reactivestate:reactivestate&quot;</span> <span class="c1">// For Android projects</span>
+
+    <span class="n">implementation</span> <span class="s2">&quot;com.ensody.reactivestate:core-test&quot;</span> <span class="c1">// Utils for unit tests that want to use coroutines</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="0140">0.14.0<a class="headerlink" href="#0140" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed <code>MutableValueFlow.value</code> assignment to have <code>distinctUntilChanged</code> behavior. This should provide the best of both worlds:</li>
+<li><code>emit</code>/<code>tryEmit</code>/<code>update</code> always emit</li>
+<li><code>.value</code> behaves exactly like with <code>MutableStateFlow</code></li>
+</ul>
+<h2 id="0130">0.13.0<a class="headerlink" href="#0130" title="Permanent link">&para;</a></h2>
+<p>After a long period of tuning the API and use at several companies this release introduces the hopefully last set of major breaking changes.</p>
+<p>This is the final migration to <code>Flow</code>-based APIs like <code>StateFlow</code>/<code>SharedFlow</code>/<code>ValueFlow</code> and removal of obsolete APIs.</p>
+<ul>
+<li><code>autoRun</code> now auto-disposes in <code>Activity.onDestroy</code>/<code>Fragment.onDestroyView</code>, so usually it should be launched in <code>Activity.onCreate()</code>/<code>Fragment.onCreateView()</code> (previously <code>onStart()</code>). It still automatically observes only between <code>onStart()</code>/<code>onStop()</code>.</li>
+<li>Removed <code>MutableLiveDataNonNull</code> and other non-null LiveData helpers. Use <code>MutableStateFlow</code> and <code>MutableValueFlow</code> instead.</li>
+<li>Added <code>MutableValueFlow</code> which implements <code>MutableStateFlow</code>, but doesn&rsquo;t have <code>distinctUntilChanged</code> behavior and offers an in-place <code>update { it.attr = ... }</code> method. This makes it safer and easier to use with mutable values.</li>
+<li>Removed <code>DerivedLiveData</code>. Use <code>DerivedStateFlow</code>/<code>derived</code> instead.</li>
+<li>Replaced <code>workQueue</code> with the much simpler <code>EventNotifier</code> which allows sending one-time events to the UI.</li>
+<li>Replaced <code>Scoped</code> with a simple <code>CoroutineScopeOwner</code> interface.</li>
+<li>Upgraded to Kotlin 1.4.10.</li>
+</ul>
+<h2 id="0120">0.12.0<a class="headerlink" href="#0120" title="Permanent link">&para;</a></h2>
+<p>Breaking changes (migration to <code>StateFlow</code>):</p>
+<ul>
+<li><code>derived</code> now returns a <code>StateFlow</code> instead of a <code>LiveData</code>, so you can use <code>derived</code> in multiplatform code.</li>
+<li><code>LiveDataStore</code> has been replaced with <code>StateFlowStore</code>, so you can write multiplatform code.</li>
+<li><code>InMemoryStore</code> has been replaced with <code>InMemoryStateFlowStore</code>.</li>
+<li><code>SavedStateHandleStore</code> now implements <code>StateFlowStore</code> and requires a <code>CoroutineScope</code> in addition to <code>SavedStateHandle</code>.</li>
+<li><code>State</code> has been renamed to <code>Scoped</code> (more descriptive).</li>
+</ul>
+<p>Other changes:</p>
+<ul>
+<li>Added <code>StateFlow</code>-based API for bindings. The <code>LiveData</code>-based API is still available.</li>
+</ul>
+<h2 id="0114">0.11.4<a class="headerlink" href="#0114" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Switched to <code>api</code> instead of <code>implementation</code> for most dependencies.</li>
+</ul>
+<h2 id="0113">0.11.3<a class="headerlink" href="#0113" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed edge case with <code>autoRun</code> on <code>LiveData</code> incorrectly ignoring the first notification.</li>
+</ul>
+<h2 id="0112">0.11.2<a class="headerlink" href="#0112" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fixed release packaging of Android reactivestate package.</li>
+</ul>
+<h2 id="011">0.11<a class="headerlink" href="#011" title="Permanent link">&para;</a></h2>
+<p>ATTENTION: There&rsquo;s a breaking change to support <code>StateFlow</code>.</p>
+<ul>
+<li>Added experimental <code>StateFlow</code> support to <code>autoRun</code> (<code>StateFlow</code> was added in <code>kotlinx-coroutines-core</code> 1.3.6).</li>
+<li>Breaking change: Removed <code>CoroutineContext.autoRun</code> and <code>suspend fun autoRun</code> because proper <code>StateFlow</code> support requires access to a <code>CoroutineScope</code>.</li>
+</ul>
+<h2 id="010">0.10<a class="headerlink" href="#010" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added <code>thisWorkQueue</code> helper for passing an arg via <code>this</code>.</li>
+<li><code>argWorkQueue</code> now supports suspension functions.</li>
+<li>Added <code>AttachedDisposables</code> interface for objects that can clean up other disposables.</li>
+<li><code>AutoRunner</code> now implements <code>AttachedDisposables</code>.</li>
+<li>Added <code>OnDispose { ... }</code> class for triggering a function when its <code>dispose()</code> method is called.</li>
+<li>Added <code>onDestroyView { ... }</code>, <code>onDestroy</code>, <code>onCreate</code>, <code>onCreateView</code> and their <code>...Once</code> variants.</li>
+<li>Added <code>validUntil</code> for properties that are only valid during a lifecycle subset.</li>
+<li>Further documentation improvements.</li>
+</ul>
+<h2 id="091">0.9.1<a class="headerlink" href="#091" title="Permanent link">&para;</a></h2>
+<p>This release introduces no code changes.</p>
+<ul>
+<li>Fixed release publication on jcenter.</li>
+<li>Minor documentation improvements.</li>
+</ul>
+<h2 id="09">0.9<a class="headerlink" href="#09" title="Permanent link">&para;</a></h2>
+<p>ATTENTION: Due to the core &amp; reactivestate module split you have to also add the core module to your dependencies as described in the <a href="https://ensody.github.io/ReactiveState-Kotlin/#installation">installation instructions</a>.</p>
+<ul>
+<li>This release splits the <code>reactivestate</code> module into a Kotlin module (<code>core</code>) and an Android module (<code>reactivestate</code>). The change is backwards-compatible unless you&rsquo;ve accessed <code>BaseAutoRunner</code> (very unlikely).</li>
+<li>Added <code>State</code> base class for separating business logic from <code>ViewModel</code>, making it easier to use in normal unit tests.</li>
+<li>Added <code>argWorkQueue</code>, arg-based <code>consume</code> and <code>consumeConflated</code> helpers for ViewModel -&gt; UI event/notification use-case.</li>
+<li>Fixed one-level recursion when observing <code>LiveData</code>.</li>
+<li>Documentation improvements.</li>
+</ul>
+<h2 id="08">0.8<a class="headerlink" href="#08" title="Permanent link">&para;</a></h2>
+<p>ATTENTION: This release comes with a few breaking changes.</p>
+<ul>
+<li>Bindings don&rsquo;t have value converters, anymore. Usually you need to store the raw field value and a separate conversion (if possible without errors), anyway. Use <code>autoRun</code> or <code>derived</code> to convert values.</li>
+<li>Added bindings for <code>CompoundButton</code> (replacing <code>CheckBox</code> bindings).</li>
+<li><code>AutoRunner</code>&lsquo;s and <code>autoRun</code>&lsquo;s <code>observer</code> callback now receives the <code>Resolver</code> via <code>this</code> instead of as an argument (more consistent and compact code). You can write <code>get(livedata)</code> to retrieve a <code>LiveData</code> value.</li>
+<li><code>AutoRunner</code>&lsquo;s and <code>autoRun</code>&lsquo;s <code>onChange</code> callback now receives the <code>AutoRunner</code> as its first argument.</li>
+<li>Improved <code>AutoRunner</code>&lsquo;s null handling of <code>LiveData</code>.</li>
+<li>Added <code>onResume</code>, <code>onResumeOnce</code>, <code>onPause</code>, <code>onPauseOnce</code>, <code>launchWhileResumed</code> lifecycle observers.</li>
+<li>Added <code>Disposable.disposeOnCompletionOf(coroutineContext)</code> extension methods.</li>
+<li>Added <code>WorkQueue</code> and helpers like <code>conflatedWorkQueue</code> for simpler communication between UI and ViewModel.</li>
+<li>Added unit tests.</li>
+<li>Added simple documentation with API reference.</li>
+</ul>
+<h2 id="05">0.5<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
+<p>Initial release.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../reference/reactivestate-test/com.ensody.reactivestate.test/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              reactivestate-test
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Ensody GmbH
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+    
+  </body>
+</html>

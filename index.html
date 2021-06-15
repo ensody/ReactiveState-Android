@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An easy to understand reactive state management solution for Kotlin and Android">
+      
+      
+      
+        <meta name="author" content="Ensody GmbH">
+      
+      
+      <link rel="icon" href="images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>ReactiveState</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reactivestate-for-kotlin-multiplatform-and-android" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="ReactiveState" class="md-header__button md-logo" aria-label="ReactiveState" data-md-component="logo">
+      
+  <img src="images/ensody.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ReactiveState
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ensody/ReactiveState-Kotlin/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReactiveState-Kotlin
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ReactiveState" class="md-nav__button md-logo" aria-label="ReactiveState" data-md-component="logo">
+      
+  <img src="images/ensody.svg" alt="logo">
+
+    </a>
+    ReactiveState
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ensody/ReactiveState-Kotlin/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReactiveState-Kotlin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Overview
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-platforms" class="md-nav__link">
+    Supported platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-intro" class="md-nav__link">
+    Quick intro
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observing-stateflow" class="md-nav__link">
+    Observing StateFlow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactive-stateflow-reactive-data" class="md-nav__link">
+    Reactive StateFlow / reactive data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-to-jetpack-compose-flutter-react" class="md-nav__link">
+    Relation to Jetpack Compose / Flutter / React
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See also
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reactive-programming/" class="md-nav__link">
+        Reactive programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multiplatform-viewmodels/" class="md-nav__link">
+        Multiplatform ViewModels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="demand-driven-programming/" class="md-nav__link">
+        Demand-driven programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event-handling/" class="md-nav__link">
+        Event handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="state-restoration/" class="md-nav__link">
+        State restoration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lifecycle-handling/" class="md-nav__link">
+        Lifecycle handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="error-handling/" class="md-nav__link">
+        Error handling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unit-testing-coroutines/" class="md-nav__link">
+        Unit testing coroutines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mutablevalueflow/" class="md-nav__link">
+        MutableValueFlow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-guess-the-number/" class="md-nav__link">
+        Example: Guess the number
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        API reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/reactivestate/com.ensody.reactivestate/" class="md-nav__link">
+        reactivestate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/reactivestate-test/com.ensody.reactivestate.test/" class="md-nav__link">
+        reactivestate-test
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-platforms" class="md-nav__link">
+    Supported platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-intro" class="md-nav__link">
+    Quick intro
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observing-stateflow" class="md-nav__link">
+    Observing StateFlow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactive-stateflow-reactive-data" class="md-nav__link">
+    Reactive StateFlow / reactive data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-to-jetpack-compose-flutter-react" class="md-nav__link">
+    Relation to Jetpack Compose / Flutter / React
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See also
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ensody/ReactiveState-Kotlin/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="reactivestate-for-kotlin-multiplatform-and-android">ReactiveState for Kotlin Multiplatform and Android<a class="headerlink" href="#reactivestate-for-kotlin-multiplatform-and-android" title="Permanent link">&para;</a></h1>
+<p><a href="https://maven-badges.herokuapp.com/maven-central/com.ensody.reactivestate/reactivestate?gav=true"><img alt="Maven Central" src="https://maven-badges.herokuapp.com/maven-central/com.ensody.reactivestate/reactivestate/badge.svg?gav=true" /></a></p>
+<p>Easy reactive state management for Kotlin Multiplatform. No boilerplate. Compatible with Android.</p>
+<p>ReactiveState-Kotlin provides these foundations:</p>
+<ul>
+<li><a href="reactive-programming/">reactive programming</a>: everything is recomputed/updated automatically based on straightforward code</li>
+<li><a href="demand-driven-programming/">demand-driven programming</a>: resource-consuming computations and values are allocated on-demand and disposed when not needed</li>
+<li><a href="multiplatform-viewmodels/">multiplatform</a>: share your ViewModels and reactive state handling logic between all platforms</li>
+<li><a href="event-handling/">event handling</a>: simple events based on interfaces (more composable and less boilerplate than sealed classes)</li>
+<li><a href="error-handling/">automatic error catching</a>: no more forgotten try-catch or copy-pasted error handling logic all over the place</li>
+<li><a href="unit-testing-coroutines/">coroutine-based unit tests</a>: worry no more about passing around <code>CoroutineDispatcher</code>s everywhere</li>
+<li><a href="lifecycle-handling/">lifecycle handling</a></li>
+<li><a href="state-restoration/">state restoration</a></li>
+</ul>
+<p>See the ReactiveState documentation for more details.</p>
+<h2 id="supported-platforms">Supported platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
+<p>android, jvm, ios, tvos, watchos, macosX64, linuxX64, js</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>Add the package to your <code>build.gradle</code>&lsquo;s <code>dependencies {}</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="c1">// Add the BOM using the desired ReactiveState version</span>
+    <span class="n">api</span> <span class="n">platform</span><span class="o">(</span><span class="s2">&quot;com.ensody.reactivestate:reactivestate-bom:VERSION&quot;</span><span class="o">)</span>
+
+    <span class="c1">// Leave out the version number from now on:</span>
+    <span class="n">implementation</span> <span class="s2">&quot;com.ensody.reactivestate:reactivestate&quot;</span>
+
+    <span class="c1">// Utils for unit tests that want to use coroutines</span>
+    <span class="n">implementation</span> <span class="s2">&quot;com.ensody.reactivestate:reactivestate-test&quot;</span>
+    <span class="c1">// Note: kotlin-coroutines-test only supports the &quot;jvm&quot; target,</span>
+    <span class="c1">// so reactivestate-test has the same limitation</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Also, make sure you&rsquo;ve integrated the Maven Central repo, e.g. in your root <code>build.gradle</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">subprojects</span> <span class="o">{</span>
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="c1">// ...</span>
+        <span class="n">mavenCentral</span><span class="o">()</span>
+        <span class="c1">// ...</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="quick-intro">Quick intro<a class="headerlink" href="#quick-intro" title="Permanent link">&para;</a></h2>
+<p>The following two principles are here to give you a quick idea of the reactive programming aspect only.
+The &ldquo;Guide&rdquo; section in the documentation describes how to work with the more advanced aspects like multiplatform ViewModels, lifecycle handling, etc.</p>
+<p>Note: While the discussion is about <code>StateFlow</code>, you can also use <code>LiveData</code> or even implement extensions for other observable values.</p>
+<h3 id="observing-stateflow">Observing StateFlow<a class="headerlink" href="#observing-stateflow" title="Permanent link">&para;</a></h3>
+<p>Imagine you have an input form with first and last name and want to observe two <code>StateFlow</code> values at the same time:</p>
+<ul>
+<li><code>isFirstNameValid: StateFlow&lt;Boolean&gt;</code></li>
+<li><code>isLastNameValid: StateFlow&lt;Boolean&gt;</code></li>
+</ul>
+<p>This is how you&rsquo;d do it by using the <code>autoRun</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">autoRun</span> <span class="p">{</span>
+    <span class="n">submitButton</span><span class="p">.</span><span class="na">isEnabled</span> <span class="o">=</span> <span class="k">get</span><span class="p">(</span><span class="n">isFirstNameValid</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="k">get</span><span class="p">(</span><span class="n">isLastNameValid</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>With <code>get(isFirstNameValid)</code> you retrieve <code>isFirstNameValid.value</code> and at the same time tell <code>autoRun</code> to re-execute the block whenever the value is changed.
+That code is similar to writing this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lifecycleScope</span><span class="p">.</span><span class="na">launchWhenStarted</span> <span class="p">{</span>
+    <span class="n">isFirstNameValid</span>
+        <span class="p">.</span><span class="na">combine</span><span class="p">(</span><span class="n">isLastNameValid</span><span class="p">)</span> <span class="p">{</span> <span class="n">firstNameValid</span><span class="p">,</span> <span class="n">lastNameValid</span> <span class="o">-&gt;</span>
+            <span class="n">firstNameValid</span> <span class="n">to</span> <span class="n">lastNameValid</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="na">conflate</span><span class="p">()</span>
+        <span class="p">.</span><span class="na">collect</span> <span class="p">{</span> <span class="p">(</span><span class="n">firstNameValid</span><span class="p">,</span> <span class="n">lastNameValid</span><span class="p">)</span> <span class="o">-&gt;</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">submitButton</span><span class="p">.</span><span class="na">isEnabled</span> <span class="o">=</span> <span class="n">firstNameValid</span> <span class="o">&amp;&amp;</span> <span class="n">lastNameValid</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">CancellationException</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">throw</span> <span class="n">e</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">Throwable</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">onError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="reactive-stateflow-reactive-data">Reactive StateFlow / reactive data<a class="headerlink" href="#reactive-stateflow-reactive-data" title="Permanent link">&para;</a></h3>
+<p>The same principle can be used to create a <code>derived</code>, reactive <code>StateFlow</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">isFormValid</span><span class="p">:</span> <span class="n">StateFlow</span><span class="o">&lt;</span><span class="kt">Boolean</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">derived</span> <span class="p">{</span>
+    <span class="k">get</span><span class="p">(</span><span class="n">isFirstNameValid</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="k">get</span><span class="p">(</span><span class="n">isLastNameValid</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now you can use <code>autoRun { submitButton.isEnabled = get(isFormValid) }</code> in the rest of your code.</p>
+<p>Going even further, <code>isFirstNameValid</code> itself would usually also be the result of a <code>derived</code> computation.
+So, you can have multiple layers of reactive <code>derived</code> <code>StateFlow</code>s.</p>
+<h2 id="relation-to-jetpack-compose-flutter-react">Relation to Jetpack Compose / Flutter / React<a class="headerlink" href="#relation-to-jetpack-compose-flutter-react" title="Permanent link">&para;</a></h2>
+<p>Reactive UI frameworks like Jetpack Compose automatically rebuild the UI whenever e.g. a <code>StateFlow</code> changes.
+Isn&rsquo;t that the same thing as <code>autoRun</code> already? Do you still need this library?</p>
+<p>If you look closely at the code sample above, the ViewModel uses <code>derived</code> to automatically recompute a <code>StateFlow</code> based on other <code>StateFlow</code>s.
+This pattern is very useful in practice and provides the perfect foundation for frameworks like Jetpack Compose which only focus on the UI aspect.
+Actually, Jetpack Compose is like <code>derived</code> for the UI.
+ReactiveState&rsquo;s <code>derived</code> and <code>autoRun</code> provide the same reactivity for your data and business logic.</p>
+<p>So, the combination of both solutions used together results in a fully reactive codebase - which improves code simplicity and avoids many bugs.</p>
+<p>Moreover, Jetpack Compose currently doesn&rsquo;t provide any multiplatform ViewModel support or any large-scale architecture.
+So, this library solves this by providing <code>BaseReactiveState</code> for ViewModels.
+This comes with a lifecycle-aware event system (<code>eventNotifier</code>) and loading state handling (so you can track one or multiple different loading indicators based on coroutines that you launch).</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<p>This library is based on <a href="https://github.com/ensody/reactive_state">reactive_state</a> for Flutter and adapted to Kotlin Multiplatform and Android patterns.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Copyright 2020-2021 Ensody GmbH, Waldemar Kornewald
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        <a href="reactive-programming/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Reactive programming
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Ensody GmbH
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+    
+  </body>
+</html>
